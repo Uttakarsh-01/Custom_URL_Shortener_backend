@@ -21,7 +21,7 @@
 
 const mongoose = require('mongoose');
 
-const urlSchema = new mongoose.Schema({ // Fixed typo here
+const urlSchema = new mongoose.Schema({
     shortId: {
         type: String,
         required: true,

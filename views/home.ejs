@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+
+    <!-- Display error if URL not found -->
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <div>
+        <form method="POST" action="/">
+            <label>Enter your original URL</label>
+            <input type="text" name="url" placeholder="https://example.com">
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+
+    <% if (shortId) { %> 
+        <p>Your short URL is: <a href="/url/<%= shortId %>">/<%= shortId %></a></p>
+    <% } %>
+</body>
+</html>
