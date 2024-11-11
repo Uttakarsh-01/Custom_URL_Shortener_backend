@@ -46,4 +46,16 @@ async function handleGenerateNewShortUrl(url) {
     return newShortId; // Return the generated short ID
 }
 
+
+router.get("/signup",(req,res)=>{
+    return res.render("signup");
+});
+// router.get("/login",(req,res)=>{
+//     return res.render("login");
+// });
+
+router.get('/login', (req, res) => {
+    res.render("login", { error: null }); // Passing default value for error
+});
+
 module.exports = router;
